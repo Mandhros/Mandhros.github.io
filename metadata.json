@@ -1,0 +1,5 @@
+{
+  "name": "Gym Assistant",
+  "description": "An application for a weightlifting assistant. The objective is to allow users to save their training sessions and monitor their progress.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Gym Assistant",
+  "short_name": "GymAssist",
+  "description": "An application for a weightlifting assistant. The objective is to allow users to save their training sessions and monitor their progress.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1A1B26",
+  "theme_color": "#1A1B26",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+        "src": "/maskable-icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+    }
+  ]
+}

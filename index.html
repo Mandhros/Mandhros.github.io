@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Gym Assistant</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1A1B26" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Hide arrows from number inputs */
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+      /* Utility class to hide scrollbars */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* for Internet Explorer, Edge */
+        scrollbar-width: none;  /* for Firefox */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#1A1B26', // Dark blue-gray background
+              surface: '#24283B',    // Slightly lighter surface color
+              primary: '#7AA2F7',     // Soft blue primary
+              'primary-dark': '#567DE4', // Darker blue for hover
+              secondary: '#41A6B5',    // Muted teal secondary
+              'text-primary': '#C0CAF5',   // Off-white primary text
+              'text-secondary': '#A9B1D6', // Lighter gray secondary text
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.12"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }).catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
